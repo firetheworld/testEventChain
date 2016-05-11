@@ -19,6 +19,12 @@
 {
     [super viewDidLoad];
     
+    [self testView];
+}
+
+- (void)testView
+{
+    
     TouchView *bgView = [[TouchView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
     bgView.backgroundColor = [UIColor cyanColor];
     bgView.name = @"bgView";
@@ -29,7 +35,7 @@
     blueView.backgroundColor = [UIColor blueColor];
     blueView.name = @"blueView";
     [self.view addSubview:blueView];
-
+    
     
     TouchView *redView = [[TouchView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
     redView.backgroundColor = [UIColor redColor];
@@ -60,8 +66,6 @@
     [self.view addGestureRecognizer:tapG];
 
 }
-
-
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
