@@ -50,19 +50,14 @@
     
     UITapGestureRecognizer *tapG =[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapClick:)];
     tapG.delegate = self;
-#if TARGET_IPHONE_SIMULATOR//模拟器
     tapG.numberOfTapsRequired = 2;
     tapG.numberOfTouchesRequired = 1;
-#elif TARGET_OS_IPHONE//真机
-    tapG.numberOfTapsRequired = 4;
-    tapG.numberOfTouchesRequired = 3;
-#endif
     
     [blueView addGestureRecognizer:tapG];
     [blueView1 addGestureRecognizer:tapG];
     [redView addGestureRecognizer:tapG];
     [redView1 addGestureRecognizer:tapG];
-//    [self.view addGestureRecognizer:tapG];
+    [self.view addGestureRecognizer:tapG];
 
 }
 
@@ -89,8 +84,8 @@
 
 - (void)tapClick:(UITapGestureRecognizer *)sender
 {
-    
-    NSLog(@"ViewController UITapGestureRecognizer,%@",sender.view);
+    TouchView *view = (TouchView *)sender.view;
+    NSLog(@"tapClick UITapGestureRecognizer,%@",view.name);
 }
 
 @end
