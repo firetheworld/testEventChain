@@ -19,6 +19,12 @@
 {
     [super viewDidLoad];
     
+    TouchView *bgView = [[TouchView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
+    bgView.backgroundColor = [UIColor cyanColor];
+    bgView.name = @"bgView";
+    self.view = bgView;
+    
+    
     TouchView *blueView = [[TouchView alloc] initWithFrame:CGRectMake(100, 100, 200, 200)];
     blueView.backgroundColor = [UIColor blueColor];
     blueView.name = @"blueView";
