@@ -15,6 +15,7 @@
 		429434651CE3160E00EC3603 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 429434631CE3160E00EC3603 /* LaunchScreen.storyboard */; };
 		429434701CE3160E00EC3603 /* testEventChainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4294346F1CE3160E00EC3603 /* testEventChainTests.m */; };
 		4294347B1CE3160E00EC3603 /* testEventChainUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4294347A1CE3160E00EC3603 /* testEventChainUITests.m */; };
+		4294348A1CE3167D00EC3603 /* TouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 429434891CE3167D00EC3603 /* TouchView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		429434761CE3160E00EC3603 /* testEventChainUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testEventChainUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4294347A1CE3160E00EC3603 /* testEventChainUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testEventChainUITests.m; sourceTree = "<group>"; };
 		4294347C1CE3160E00EC3603 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		429434881CE3167D00EC3603 /* TouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchView.h; sourceTree = "<group>"; };
+		429434891CE3167D00EC3603 /* TouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,8 @@
 				4294345B1CE3160E00EC3603 /* ViewController.h */,
 				4294345C1CE3160E00EC3603 /* ViewController.m */,
 				4294345E1CE3160E00EC3603 /* Main.storyboard */,
+				429434881CE3167D00EC3603 /* TouchView.h */,
+				429434891CE3167D00EC3603 /* TouchView.m */,
 				429434611CE3160E00EC3603 /* Assets.xcassets */,
 				429434631CE3160E00EC3603 /* LaunchScreen.storyboard */,
 				429434661CE3160E00EC3603 /* Info.plist */,
@@ -270,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4294348A1CE3167D00EC3603 /* TouchView.m in Sources */,
 				4294345D1CE3160E00EC3603 /* ViewController.m in Sources */,
 				4294345A1CE3160E00EC3603 /* AppDelegate.m in Sources */,
 				429434571CE3160E00EC3603 /* main.m in Sources */,
