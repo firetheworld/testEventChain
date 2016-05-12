@@ -59,37 +59,76 @@
     tapG.numberOfTapsRequired = 2;
     tapG.numberOfTouchesRequired = 1;
     
-    [blueView addGestureRecognizer:tapG];
-    [blueView1 addGestureRecognizer:tapG];
-    [redView addGestureRecognizer:tapG];
-    [redView1 addGestureRecognizer:tapG];
+    UITapGestureRecognizer *tapG2 =[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapClick:)];
+    tapG2.delegate = self;
+    tapG2.numberOfTapsRequired = 3;
+    tapG2.numberOfTouchesRequired = 1;
+    
+    UITapGestureRecognizer *tapG3 =[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapClick:)];
+    tapG2.delegate = self;
+    tapG2.numberOfTapsRequired = 1;
+    tapG2.numberOfTouchesRequired = 1;
+
+    
+    [blueView addGestureRecognizer:tapG2];
+//    [blueView1 addGestureRecognizer:tapG];
+    [redView addGestureRecognizer:tapG3];
+//    [redView1 addGestureRecognizer:tapG];
     [self.view addGestureRecognizer:tapG];
+    
+//    redView.userInteractionEnabled = NO;
 
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     
-    NSLog(@"ViewController touchesBegan");
-    
+    NSLog(@"touchesBegan, and I am ViewController,%@", self);
+    NSLog(@"my next responder:%@", [self nextResponder]);
+    NSLog(@"----------------------------------------------");
+    [[self nextResponder] touchesMoved:touches withEvent:event];
 }
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     
-    NSLog(@"ViewController touchesMoved");
+    NSLog(@"touchesMoved, and I am ViewController,%@", self);
+    NSLog(@"my next responder:%@", [self nextResponder]);
+    NSLog(@"----------------------------------------------");
+    [[self nextResponder] touchesMoved:touches withEvent:event];
+
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     
-    NSLog(@"ViewController touchesMoved");
+    NSLog(@"touchesEnded, and I am ViewController,%@", self);
+    NSLog(@"my next responder:%@", [self nextResponder]);
+    NSLog(@"----------------------------------------------");
+    [[self nextResponder] touchesMoved:touches withEvent:event];
+
 }
 
 - (void)tapClick:(UITapGestureRecognizer *)sender
 {
     TouchView *view = (TouchView *)sender.view;
     NSLog(@"tapClick UITapGestureRecognizer,%@",view.name);
+    NSLog(@"----------------------------------------------");
+
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
+{
+    
+    TouchView *view = (TouchView *)gestureRecognizer.view;
+    NSLog(@"shouldReceiveTouch,%@",view.name);
+    NSLog(@"----------------------------------------------");
+//    if ([view.name isEqualToString:@"redView"]) {
+//        return YES;
+//    }else{
+//        return NO;
+//    }
+    return YES;
 }
 
 @end
