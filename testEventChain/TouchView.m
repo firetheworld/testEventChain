@@ -18,37 +18,37 @@
 }
 */
 
-//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-//{
-//    
-//    NSLog(@"touchesBegan, and I am %@,%@",self.name, self);
-//    NSLog(@"my next responder:%@", [self nextResponder]);
-//    NSLog(@"----------------------------------------------");
-//
-////    [[self nextResponder] touchesBegan:touches withEvent:event];
-//    
-//}
-//
-//- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-//{
-//    
-//    NSLog(@"touchesMoved, and I am %@,%@",self.name, self);
-//    NSLog(@"my next responder:%@", [self nextResponder]);
-//    NSLog(@"----------------------------------------------");
-//
-////    [[self nextResponder] touchesMoved:touches withEvent:event];
-//
-//}
-//
-//- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-//{
-//    
-//    NSLog(@"touchesEnded, and I am %@,%@",self.name, self);
-//    NSLog(@"my next responder:%@", [self nextResponder]);
-//    NSLog(@"----------------------------------------------");
-//
-////    [[self nextResponder] touchesEnded:touches withEvent:event];
-//
-//}
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    
+    NSLog(@"touchesBegan, and I am %@,%@",self.name, self);
+    NSLog(@"my next responder:%@", [self nextResponder]);
+    NSLog(@"----------------------------------------------");
+
+//    [[self nextResponder] touchesBegan:touches withEvent:event];
+    
+}
+
+- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    
+    NSLog(@"touchesMoved, and I am %@,%@",self.name, self);
+    NSLog(@"my next responder:%@", [self nextResponder]);
+    NSLog(@"----------------------------------------------");
+
+//    [[self nextResponder] touchesMoved:touches withEvent:event];
+
+}
+
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    
+    NSLog(@"touchesEnded, and I am %@,%@",self.name, self);
+    NSLog(@"my next responder:%@", [self nextResponder]);
+    NSLog(@"----------------------------------------------");
+
+//    [[self nextResponder] touchesEnded:touches withEvent:event];
+
+}
 
 @end

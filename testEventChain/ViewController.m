@@ -70,11 +70,11 @@
     tapG2.numberOfTouchesRequired = 1;
 
     
-    [blueView addGestureRecognizer:tapG2];
+    [blueView addGestureRecognizer:tapG];
 //    [blueView1 addGestureRecognizer:tapG];
-    [redView addGestureRecognizer:tapG3];
+    [redView addGestureRecognizer:tapG];
 //    [redView1 addGestureRecognizer:tapG];
-    [self.view addGestureRecognizer:tapG];
+//    [self.view addGestureRecognizer:tapG];
     
 //    redView.userInteractionEnabled = NO;
 
