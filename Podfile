@@ -1,0 +1,5 @@
+platform :ios ,'7.0'
+pod 'JSONModel', '~> 1.1.0'
+pod 'Masonry', '~> 0.6.2'
+pod 'ReactiveCocoa' , '~>2.4.7'
+pod 'AFNetworking' , '~>3.1.0'
