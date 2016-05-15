@@ -8,8 +8,9 @@
 
 #import "ViewController.h"
 #import "TouchView.h"
+#import "AFNetworking.h"
 
-@interface ViewController ()<UIGestureRecognizerDelegate>
+@interface ViewController ()<UIGestureRecognizerDelegate,NSURLSessionDataDelegate>
 
 @end
 
@@ -20,6 +21,7 @@
     [super viewDidLoad];
     
     [self testView];
+    [self testAFNetworking];
 }
 
 - (void)testView
@@ -129,6 +131,41 @@
 //        return NO;
 //    }
     return YES;
+}
+
+- (void)testNetwork
+{
+    
+    NSURL *url = [NSURL URLWithString:@"http://www.baidu.com/"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (error != nil) {
+            NSLog(@"requset had a error :%@",error);
+            return;
+        }
+        
+        NSLog(@"request has get data : %@",data);
+    }];
+    
+    [task resume];
+    
+}
+
+- (void)testAFNetworking
+{
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    [manager GET:@"http://www.baidu.com" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        NSLog(@"success:%@",responseObject);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+
+        NSLog(@"error:%@",error);
+    
+    }];
+    
 }
 
 @end

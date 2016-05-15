@@ -6,3 +6,5 @@ testEventChain.xcodeproj/project.xcworkspace/xcuserdata/Flame.xcuserdatad/UserIn
 *.xcscheme
 
 *.xcuserstate
+
+*.xcbkptlist
