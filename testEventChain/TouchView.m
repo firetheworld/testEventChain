@@ -20,7 +20,6 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    
     NSLog(@"touchesBegan, and I am %@,%@",self.name, self);
     NSLog(@"my next responder:%@", [self nextResponder]);
     NSLog(@"----------------------------------------------");
@@ -31,7 +30,6 @@
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    
     NSLog(@"touchesMoved, and I am %@,%@",self.name, self);
     NSLog(@"my next responder:%@", [self nextResponder]);
     NSLog(@"----------------------------------------------");

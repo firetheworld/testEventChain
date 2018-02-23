@@ -9,8 +9,12 @@
 #import "ViewController.h"
 #import "TouchView.h"
 #import "AFNetworking.h"
+#import "DYTestModel.h"
+#import "NextViewController.h"
 
 @interface ViewController ()<UIGestureRecognizerDelegate,NSURLSessionDataDelegate>
+
+@property (nonatomic, strong) NextViewController *nextVc;
 
 @end
 
@@ -20,8 +24,24 @@
 {
     [super viewDidLoad];
     
-    [self testView];
-    [self testAFNetworking];
+//    [self testView];
+	
+//	NSString *s1 = @"test";
+//	NSLog(@"s1%p",s1);
+//	NSString *s2 = @"test";
+//	NSLog(@"s2%p",s2);
+//	NSString *s3 = [NSString stringWithFormat:@"test"];
+//	NSLog(@"s3%p",s3);
+//
+//	NSLog(@"S1 isEqual:%d", [s1 isEqual:s2]);
+//	NSLog(@"S2 isEqual:%d", s2 == s3);
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+	[super viewWillAppear:animated];
+	
+//	[self testAFNetworking];
+//	[self testJSON];
 }
 
 - (void)testView
@@ -156,16 +176,29 @@
 {
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    [manager GET:@"http://www.baidu.com" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-        NSLog(@"success:%@",responseObject);
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+   
+    
+}
 
-        NSLog(@"error:%@",error);
-    
-    }];
-    
+- (void)testJSON {
+	NSDictionary *dic = @{@"number":@"13612345678",
+						  @"name":@"Germany",
+						  @"age":@(49)
+						  };
+	
+	DYTestModel *model = [DYTestModel yy_modelWithDictionary:dic];
+}
+- (IBAction)jumpToNextVC:(UIButton *)sender {
+	
+	NextViewController *vc = [[NextViewController alloc] init];
+	[self.navigationController pushViewController:vc animated:YES];
+}
+
+- (NextViewController *)nextVc {
+	if (_nextVc == nil) {
+		_nextVc = [[NextViewController alloc] init];
+	}
+	return _nextVc;
 }
 
 @end

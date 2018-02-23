@@ -1,10 +1,11 @@
-
-testEventChain.xcodeproj/xcuserdata/datayes.xcuserdatad/xcschemes/testEventChain.xcscheme
-
-testEventChain.xcodeproj/project.xcworkspace/xcuserdata/Flame.xcuserdatad/UserInterfaceState.xcuserstate
-
 *.xcscheme
 
 *.xcuserstate
 
 *.xcbkptlist
+
+Pods
+
+Pods/Headers/Private/AFNetworking/AFAutoPurgingImageCache.h
+
+Pods/Headers/Private/AFNetworking/AFAutoPurgingImageCache.h

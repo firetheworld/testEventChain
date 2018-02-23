@@ -14,26 +14,45 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - Charts (3.0.5):
+    - Charts/Core (= 3.0.5)
+  - Charts/Core (3.0.5)
+  - CTNetworking (1.0.0):
+    - AFNetworking (~> 3.1.0)
   - JSONModel (1.1.2)
-  - Masonry (0.6.4)
-  - ReactiveCocoa (2.4.7):
-    - ReactiveCocoa/UI (= 2.4.7)
-  - ReactiveCocoa/Core (2.4.7):
-    - ReactiveCocoa/no-arc
-  - ReactiveCocoa/no-arc (2.4.7)
-  - ReactiveCocoa/UI (2.4.7):
-    - ReactiveCocoa/Core
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+  - YTKNetwork (2.0.4):
+    - AFNetworking (~> 3.0)
+  - YYModel (1.0.4)
 
 DEPENDENCIES:
-  - AFNetworking (~> 3.1.0)
+  - Charts (from `http://git.datayes.com/iOS-Library/DYCharts.git`)
+  - CTNetworking
   - JSONModel (~> 1.1.0)
-  - Masonry (~> 0.6.2)
-  - ReactiveCocoa (~> 2.4.7)
+  - SDWebImage (~> 3.7)
+  - YTKNetwork
+  - YYModel
+
+EXTERNAL SOURCES:
+  Charts:
+    :git: http://git.datayes.com/iOS-Library/DYCharts.git
+
+CHECKOUT OPTIONS:
+  Charts:
+    :commit: d437e234e3ae6b0e6ed83f27e20433580c2d0362
+    :git: http://git.datayes.com/iOS-Library/DYCharts.git
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  Charts: d2bd21af84cc9c52a27604e1e51df90d481fb354
+  CTNetworking: c632f0f19ec4385214c47985943b3002da20f862
   JSONModel: 216584d0311b053ff714f1d6cb700dbf890847bc
-  Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
-  ReactiveCocoa: eb38dee0a0e698f73a9b25e5c1faea2bb4c79240
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-COCOAPODS: 0.38.2
+PODFILE CHECKSUM: db304d6d4aa3e421327bf16d9bd839793fd38ec0
+
+COCOAPODS: 1.4.0
